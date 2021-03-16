@@ -1,0 +1,134 @@
+/* IMPORT */
+
+/* Fontovi */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+/* OSNOVNI ELEMENTI */
+
+.glavna-forma-pr button {
+    font-family: Fjalla One;
+    text-transform: uppercase;
+    transition: 0.3s;
+    outline: none;
+    font-size: 5vmax;
+}
+
+.glavna-forma-pr h1, 
+.glavna-forma-pr h2 {
+    font-family: Fjalla One;
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--login-heading-color);
+    font-weight: lighter;
+    font-size: 2vmax;
+}
+
+.glavna-forma-pr h4, 
+.glavna-forma-pr label {
+    color: var(--login-text-color);
+    font-size: large;
+}
+
+.glavna-forma-pr input {
+    color: var(--login-input-text);
+    font-size: larger;
+}
+
+.glavna-forma-pr input::placeholder {
+    font-style: italic;
+    color: var(--login-placeholder-text);
+}
+
+/* GLAVNA FORMA STIL */
+
+.glavna-forma-pr {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: row;
+    min-width: max-content;
+    grid-template-columns: 30%;
+    margin-top: 5%;
+}
+
+.glavna-forma-pr .dugme-modul {
+    padding: 2% 5% 2% 5%;
+    justify-self: end;
+    border: none;
+    border-radius: 10% 10% 0% 0%;
+    box-shadow: 0 0 2px var(--login-shadow-color);
+    background-color: var(--login-other-button-color);
+    color: var(--login-button-text);
+    z-index: 999;
+    font-size: large;
+    transition: 0.3s;
+}
+
+.glavna-forma-pr .dugme-modul:hover {
+    color: var(--login-other-button-color);
+    background-color: var(--login-button-text);
+}
+
+/* ZAJEDNIČKO PRIJAVA I REGISTRACIJA */
+
+.forma-prijava, 
+.forma-registracija {
+    display: grid;
+    width: 100%;
+    background-color: var(--login-wrapper);
+    padding: 5%;
+    border-radius: 2%;
+    box-shadow: 0 0 2px var(--login-shadow-color);
+    min-width: max-content;
+    min-height: 350px;
+}
+
+.forma-prijava input, 
+.forma-prijava button, 
+.forma-registracija input, 
+.forma-registracija button {
+    padding: 10px;
+    margin-top: 3px;
+    border: none;
+}
+
+.forma-prijava input, 
+.forma-registracija input {
+    box-shadow: inset 0 0 2px var(--login-shadow-color);
+    background-color: var(--login-input-color);
+}
+
+.forma-prijava button, 
+.forma-registracija button {
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--login-shadow-color);
+    background-color: var(--login-button-color);
+    color: var(--login-button-text);
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.forma-prijava button:hover, 
+.forma-registracija button:hover {
+    color: var(--login-wrapper);
+    background-color: var(--login-button-text);
+}
+
+/* FORMA PRIJAVE */
+
+.forma-prijava {
+    height: 18vmax;
+}
+
+/* FORMA REGISTRACIJE */
+
+.forma-registracija {
+    height: 30vmax;
+}
+
+.forma-registracija .odabir-razina {
+    display: flex;
+    flex-direction: inline;
+    justify-content:flex-start;
+    align-items: baseline;
+}

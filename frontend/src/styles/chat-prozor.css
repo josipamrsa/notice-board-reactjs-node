@@ -1,0 +1,343 @@
+/* IMPORT */
+
+/* Fontovi */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/* STIL ZAGLAVLJA */
+
+.chat-zaglavlje {
+    background-color: var(--chat-header-color);
+    color: var(--chat-header-text-color);
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: baseline;
+    padding: 1%;
+    box-shadow: 0 0 4px var(--dash-shadow-color);
+}
+
+.chat-zaglavlje .chat-zaglavlje-naslov {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: 1.5vmax;
+}
+
+.chat-zaglavlje .chat-zaglavlje-naslov h1 {
+    padding: 0;
+    margin: 0;
+    font-family: Caveat;
+}
+
+.chat-zaglavlje .chat-zaglavlje-kontrole button,
+.chat-zaglavlje .chat-zaglavlje-kontrole a {
+    border: none;
+    background: none;
+    text-decoration: none;
+    outline: none;
+    color: var(--chat-header-button);
+    transition: 0.3s;
+}
+
+.chat-zaglavlje .chat-zaglavlje-kontrole button:hover,
+.chat-zaglavlje .chat-zaglavlje-kontrole a:hover {
+    color: var(--chat-notify-message-color);
+}
+
+/* STIL CONTAINERA ZA CHAT PORUKE */
+
+.chat-forma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--chat-form-background);
+    width: 75%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--chat-form-shadow);
+    backdrop-filter: blur(2px);
+}
+
+.chat-forma > * {
+    margin-top: 10px;
+}
+
+.chat-form-poruke {
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 29vmax;
+    width: 100%;
+    list-style-type: none;
+}
+
+.chat-form-poruke ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.chat-form-poruke ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1%;
+}
+
+/* CHAT PORUKE - IZGLED POJEDINAČNE PORUKE */
+
+.poruka-korisnik-info {
+    background-color: var(--chat-message-info-color);
+    color: var(--chat-message-info-text-color);
+    border-radius: 10px;
+    width: fit-content;
+    font-size: 1.5vmin;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.poruka-sadrzaj, 
+.poruka-obavijest-sadrzaj {
+    border-radius: 20px 20px 20px 5px;
+    box-shadow: 0 0 3px var(--chat-message-shadow);
+    width: 95%;
+    padding: 1%; 
+}
+
+.poruka-sadrzaj {
+    background-color: var(--chat-message-color);
+    color: var(--chat-message-text-color);
+}
+
+.poruka-obavijest-sadrzaj {
+    background-color: var(--chat-notify-message-color);
+    color: var(--chat-notify-text-color);
+    text-shadow: 0 0 3px var(--chat-notify-shadow-text-color);
+    font-size: larger;
+    font-weight: 500;
+}
+
+.poruka-obavijest-sadrzaj .poruka-korisnik-info {
+    background-color: var(--chat-notify-info-color);
+    color: var(--chat-notify-info-text-color);
+}
+
+/* UNOS NOVE PORUKE */
+
+.chat-forma-unos-wrapper,
+.chat-forma-unos div {
+    width: 100%;
+}
+
+.chat-forma-unos {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 15fr 1fr;
+    grid-template-areas: "obavijest sadrzaj slanje";
+}
+
+.chat-forma-unos .obavijest {
+    grid-area: obavijest;
+    display: flex;
+}
+
+.chat-forma-unos .obavijest label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    color: var(--chat-notify-bell-color);
+}
+
+.chat-forma-unos .obavijest label input {
+    margin: 0;
+}
+
+.chat-forma-unos .sadrzaj {
+    grid-area: sadrzaj;
+    width: 98%;
+}
+
+.chat-forma-unos .sadrzaj input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px gray;
+}
+
+.chat-forma-unos .slanje {
+    grid-area: slanje;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.chat-forma-unos .slanje button {
+    width: 75%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background: var(--chat-button-color);
+    color: var(--chat-message-info-text-color);
+    box-shadow: 0 0 4px var(--chat-button-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.chat-forma-unos .slanje button:hover {
+    color: var(--chat-button-color);
+    background: var(--chat-message-info-text-color);
+}
+
+/* IZGLED FILTERA ZA DATUM SLANJA PORUKE */
+
+.datum-filter {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.datum-input {
+    width: 88%;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px gray;
+    color: var(--chat-message-text-color);
+}
+
+.datum-salji {
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+    background: var(--chat-button-color);
+    color: var(--chat-message-info-text-color);
+    box-shadow: 0 0 4px var(--chat-button-shadow);
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datum-salji:hover {
+    color: var(--chat-button-color);
+    background: var(--chat-message-info-text-color);
+}
+
+input[type="date" i] {
+    font-family: Fjalla One;
+    font-size: 2vmin;
+}
+
+/* MODALNI PROZOR U CHAT KOMPONENTI */
+
+.modal-kanal-wrapper {
+    margin-top: 0;
+    margin-left: 3%;
+}
+
+.modal-kanal-wrapper h2 {
+    font-family: Caveat;
+    font-size: 3vmax;
+    margin: 0;
+    color: var(--modal-header-text-color);
+    text-shadow: 0 0 3px var(--modal-second-header-color);
+}
+
+.modal-kanal-info {
+    background-color: var(--modal-study-group-header);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modal-kanal-info h4 {
+    font-family: Oswald;
+    font-size: 1.5vmax;
+    margin: 0;
+    color: var(--modal-header-text-color);
+    text-shadow: 0 0 3px var(--modal-shadow-elements);
+}
+
+.modal-kanal-info > * {
+    margin: 1%;
+}
+
+.modal-kanal-info .osnovni-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-kanal-info .osnovni-info ul,
+.modal-kanal-info .studijske-grupe ul,
+.modal-kanal-info .info-pretplatnici ul {
+    color: var(--modal-second-header-color);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.modal-kanal-info .studijske-grupe ul li,
+.modal-kanal-info .info-pretplatnici ul li {
+    margin-top: 3px;
+    box-shadow: 0 0 3px var(--modal-shadow-elements);
+}
+
+.modal-kanal-info .osnovni-info ul {
+    background-color: var(--modal-content-background);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 3px var(--modal-shadow-elements);
+}
+
+.modal-kanal-info .studijske-grupe ul li {
+    padding: 1%;
+    background-color: var(--modal-content-background);
+    border-radius: 5px;
+}
+
+.modal-kanal-info .info-pretplatnici ul li {
+    display: flex;
+    background-color: var(--modal-content-background);
+    border-radius: 5px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.modal-kanal-info .info-pretplatnici ul li button {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 1%;
+    background-color: tomato;
+    color: white;
+    box-shadow: 0 0 2px gray;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-kanal-info .info-pretplatnici ul li button:hover {
+    background-color: rgb(255, 165, 149);
+}

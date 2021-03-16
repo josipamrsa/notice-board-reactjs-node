@@ -1,0 +1,448 @@
+/* IMPORT */
+
+/* Fontovi */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+/* GLAVNA FORMA STIL */
+
+.glavna-forma-np button {
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* ZAGLAVLJE */
+
+.header-nadzorna {
+    background-color: var(--dash-header-color);
+    color: var(--dash-header-text-color);
+    font-family: Caveat;
+    font-size: 1.5vmax;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: baseline;
+    padding: 1%;
+    box-shadow: 0 0 4px var(--dash-shadow-color);
+}
+
+.header-nadzorna button {
+    background-color: var(--dash-header-color);
+    color: var(--dash-second-button-color);
+    transition: 0.3s;
+}   
+
+.header-nadzorna button:hover {
+    color: var(--dash-header-color);
+    background-color: var(--dash-second-button-color);
+    box-shadow: 0 0 4px var(--dash-second-button-color);
+}
+
+.opcije > * {
+    margin-right: 3px;
+}
+
+.korisnik-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: baseline;
+}
+
+.korisnik-info h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+/* GLAVNA FORMA - KOMPONENTA PREGLEDA KANALA */
+
+.kanal-info-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.kanal-info-container > * {
+    margin: 0%;
+}
+
+.kanal-info-container h1 {
+    font-family: Caveat;
+    font-weight: lighter;
+    color: var(--dash-second-header-text-color);
+    background-color: var(--dash-header-color);
+    padding: 2%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 4px var(--dash-shadow-color);
+}
+
+.kanal-info-container select {
+    background-color: var(--dash-select-item-color);
+    color: var(--dash-text-item-color);
+    padding: 1%;
+    border: none;
+}
+
+.kanal-info-container ul, 
+.kanal-info-container .no-channel {
+    background-color: var(--dash-item-container);
+    padding: 2%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 4px var(--dash-second-shadow-color);
+}
+
+.kanal-info-container ul li {
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 1.5vmax;
+    font-weight: bold;
+    display: flex;
+    background-color: var(--dash-item-li-color);
+    color: var(--dash-second-text-color);
+    justify-content: space-between;
+    align-items: space-between;
+    align-content: baseline;
+    margin-top: 1%;
+    padding: 7px;
+    border-radius: 7px;
+    text-shadow: 0 0 2px var(--dash-second-shadow-color);
+}
+
+.kanal-info-container ul li a {
+    text-decoration: none;
+    color: var(--dash-text-item-color);
+    transition: 0.3s;
+}
+
+.kanal-info-container ul li a:hover {
+    text-decoration: none;
+    color: var(--dash-link-hover-color);
+}
+
+.kanal-info-container ul li button {
+    color: var(--dash-text-item-color);
+    background-color: var(--dash-button-color);
+    transition: 0.3s;
+    outline: none;
+}
+
+.kanal-info-container ul li button:hover {
+    text-decoration: none;
+    background-color: var(--dash-button-hover-color);
+}
+
+/* MODALNI PROZOR GLAVNI STIL */
+
+.modal-zatvori {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--dash-header-color);
+    transition: 0.3s;
+    position: fixed;
+}
+
+.modal-zatvori:hover {
+    color: var(--dash-text-item-color);
+}
+
+/* MODALNI PROZOR - KARTICNI PRIKAZ */
+
+.kartice-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kartice-modal button:focus {
+    background-color: var(--modal-study-group-header);
+    box-shadow: 0 0 4px var(--modal-second-button-color);
+}
+
+.kartice-modal button {
+    border: none;
+    background-color: var(--modal-second-button-color);
+    color: var(--dash-text-item-color);
+    padding: 1%;
+    margin-right: 2px;
+    border-radius: 10px 10px 0 0;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 1vmax;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODALNI PROZOR - KOMPONENTE AZURIRAJ, DODAJ, UPRAVLJAJ */
+
+.modal-dodaj, 
+.modal-azuriraj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-upravljaj {
+    display: grid;
+    grid-template-columns: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dodaj .p-upozorenje {
+    color: white;
+}
+
+.modal-upravljaj .p-upozorenje {
+    justify-self: center;
+    color: white;
+}
+
+.upravljanje-kontrole {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.upravljanje-kontrole button {
+    border: none;
+    outline: none;
+    padding: 4%;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: var(--modal-third-button-color);
+    box-shadow: 0 0 2px var(--modal-text-shadow);
+    color: var(--modal-header-text-color);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upravljanje-kontrole button:hover {
+    color: var(--modal-third-button-color);
+    background-color: var(--modal-header-text-color);
+}
+
+.kanal-info-azuriranje {
+    font-family: Oswald;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5vmax;
+    color: var(--modal-header-text-color);
+    text-shadow: 0 0 2px var(--modal-text-shadow);
+}
+
+.modal-upravljaj ul {
+    background-color: var(--modal-content-background);
+    box-shadow: 0 0 2px var(--modal-text-shadow);
+    padding: 2%;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.modal-upravljaj ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    margin-top: 1%;
+    background-color: var(--modal-study-group-selections);
+    border-radius: 5px;
+}
+
+/* MODALNI PROZOR - FORMA ZA UNOS/AŽURIRANJE KANALA */
+
+.modal-kanal-forma {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: var(--modal-content-background);
+    border-radius: 10px;
+    width: 75%;
+    box-shadow: 0 0 2px var(--modal-text-shadow);
+}
+
+.modal-kanal-forma form button {
+    border: none;
+    padding: 2%;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: var(--modal-third-button-color);
+    color: var(--modal-header-text-color);
+    width: 100%;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-kanal-forma form button:hover {
+    color: var(--modal-third-button-color);
+    background-color: var(--modal-header-text-color);
+    box-shadow: 0 0 2px var(--modal-text-shadow);
+}
+
+.modal-azuriraj .modal-kanal-forma {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* FORMA ZA UNOS/AŽURIRANJE KANALA - DIJELOVI FORME */
+
+.forma-ime {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.forma-ime input[type="text"] {
+    margin-top: 5px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    box-shadow: inset 0 0 3px var(--modal-input-shadow);
+    padding: 15px;
+}
+
+.forma-tip {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: baseline;
+    justify-content: flex-end;
+    padding: 1%;
+    color: var(--modal-type-text);
+}
+
+.modal-upravljaj .modal-azuriraj .modal-kanal-forma ul, 
+.modal-upravljaj .modal-azuriraj .modal-kanal-forma ul li {
+    background: none;
+    padding: 0%;
+    justify-content: flex-start;
+    box-shadow: none;
+}
+
+.forma-studijske {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "naslov preddiplomski diplomski";
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--modal-study-group-text);
+}
+
+.forma-studijske .naslov {
+    grid-area: naslov;
+    background-color: var(--modal-study-group-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+}
+
+.forma-studijske .diplomski {
+    grid-area: diplomski;
+    background-color: var(--modal-study-group-second-selections);
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.forma-studijske .preddiplomski {
+    grid-area: preddiplomski;
+    background-color: var(--modal-study-group-selections);
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forma-studijske .naslov h3 { 
+    color: var(--modal-header-text-color);
+    font-family: Caveat;
+    font-size: 2vmax; 
+}
+
+.forma-studijske h4 { 
+    color: var(--modal-header-text-color);
+    text-shadow: 0 0 2px var(--modal-text-shadow);
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 1.5vmax; 
+}
+
+.forma-studijske ul {
+    list-style-type: none;
+}
+
+/* KOMPONENTA AŽURIRANJA - DODATNO */
+
+.azuriranje-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 5% 90%;
+    width: 100%;
+}
+
+.azuriranje-container .zatvori-azuriranje {
+    border: none;
+    background-color: var(--modal-content-background);
+    color: var(--modal-third-header-text-color);
+    margin: 0;
+    padding: 2%;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    height: 10%;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.azuriranje-container .zatvori-azuriranje:hover {
+    background-color: var(--modal-content-background);
+    color: var(--modal-second-header-text-color);
+}
+
+/* ERROR HANDLER KOMPONENTA */
+
+.err-handler-container {
+    background-color: var(--dash-item-container);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 3px var(--modal-text-shadow);
+    color: tomato;
+}
+
+.err-handler-container button {
+    color: var(--dash-button-color);
+    background: none;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+.err-handler-container button:hover {
+    color: var(--dash-item-li-color);
+}
