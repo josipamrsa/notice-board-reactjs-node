@@ -1,5 +1,5 @@
 //----IMPORTI----//
-import bg1 from '../../res/bg1.png';
+//import bg1 from '../../res/bg1.png';
 
 //----TEME----//
 const pmf = {
@@ -87,7 +87,7 @@ const skolska = {
     "--scrollbar-thumb-inverse-color": "linear-gradient(wheat, #7D5F4D, #7D5F4D, #4D2F2C)",
 
     // Pozadinska slika
-    "--background": `url(${bg1})`,
+    "--background": "linear-gradient(#4D2F2C, #7D5F4D, #7D5F4D, wheat)",
 
     // Login komponenta
     "--login-wrapper": "#4D2F2C",
